@@ -1,21 +1,37 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import { PaperAirplaneIcon } from "@heroicons/react/outline";
 
 function Navbar() {
   const router = useRouter();
 
   return (
-    <nav>
-      <ul className="flex items-center justify-between p-8">
+    <nav className="bg-gray-50">
+      <ul className="flex flex-wrap items-center justify-between px-8 py-2">
         <li className="text-xl dark:text-black">
           <p
             onClick={() => router.push("/")}
-            className="px-4 py-2 text-black cursor-pointer italic "
+            className="px-6 py-6 text-black cursor-pointer"
           >
-            <span className="text-red-400 text-3xl not-italic">A</span>nurag
-            <span className="text-green-500 text-3xl not-italic">D</span>ash
+            <span className="text-red-500 text-3xl ">A</span>nurag
+            <span className="text-green-500 text-3xl">D</span>ash
           </p>
         </li>
+
+        <ul className="hidden md:flex flex-row space-x-4">
+          <li>
+            <Link href="/about">About</Link>
+          </li>
+          <li>
+            <Link href="/resume">Resume</Link>
+          </li>
+          <li>
+            <Link href="/projects">Projects</Link>
+          </li>
+          <li>
+            <Link href="/blog">Blogs</Link>
+          </li>
+        </ul>
       </ul>
     </nav>
   );
