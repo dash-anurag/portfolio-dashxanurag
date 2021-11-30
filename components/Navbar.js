@@ -11,7 +11,7 @@ function Navbar() {
         <li className="text-xl dark:text-black ">
           <p
             onClick={() => router.push("/")}
-            className="px-6 py-6 text-black cursor-pointer"
+            className="px-6 py-6 text-black cursor-pointer "
           >
             <span className="text-red-500 text-3xl ">A</span>nurag
             <span className="text-green-500 text-3xl">D</span>ash
@@ -19,16 +19,16 @@ function Navbar() {
         </li>
 
         <ul className="hidden sm:flex flex-row space-x-4">
-          <li className="buttonExpand">
+          <li className="buttonExpand hover-underline-animation">
             <Link href="/about">About</Link>
           </li>
-          <li className="buttonExpand">
+          <li className="buttonExpand hover-underline-animation">
             <Link href="/resume">Resume</Link>
           </li>
-          <li className="buttonExpand">
+          <li className="buttonExpand hover-underline-animation">
             <Link href="/projects">Projects</Link>
           </li>
-          <li className="buttonExpand">
+          <li className="buttonExpand hover-underline-animation">
             <Link href="/blog">Blogs</Link>
           </li>
         </ul>
