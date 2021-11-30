@@ -6,9 +6,9 @@ function Navbar() {
   const router = useRouter();
 
   return (
-    <nav className="bg-gray-50">
+    <nav>
       <ul className="flex flex-wrap items-center justify-between px-8 py-2">
-        <li className="text-xl dark:text-black">
+        <li className="text-xl dark:text-black ">
           <p
             onClick={() => router.push("/")}
             className="px-6 py-6 text-black cursor-pointer"
@@ -18,17 +18,17 @@ function Navbar() {
           </p>
         </li>
 
-        <ul className="hidden md:flex flex-row space-x-4">
-          <li>
+        <ul className="hidden sm:flex flex-row space-x-4">
+          <li className="buttonExpand">
             <Link href="/about">About</Link>
           </li>
-          <li>
+          <li className="buttonExpand">
             <Link href="/resume">Resume</Link>
           </li>
-          <li>
+          <li className="buttonExpand">
             <Link href="/projects">Projects</Link>
           </li>
-          <li>
+          <li className="buttonExpand">
             <Link href="/blog">Blogs</Link>
           </li>
         </ul>
